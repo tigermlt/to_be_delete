@@ -10,8 +10,7 @@ Network motifs are recurring, significant patterns of interconnections in the ne
 
 Recurrence of motif represents it occurs with high frequency. We allow overlapping of motifs.
 
-Significance of a motif means it is more frequent than expected. The key idea is subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as 
-$Z_{i} = \frac{N_{i}^{real} - N_{i}^{rand}}{std(N_{i}^{rand})}$ 
+Significance of a motif means it is more frequent than expected. The key idea is subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as <br>$Z_{i} = \frac{N_{i}^{real} - N_{i}^{rand}}{std(N_{i}^{rand})}$ 
 where $N_{i}^{rand}$ is #(subgraphs of type i) in network $G^{rand}$ and 
 $N_{i}^{rand}$ is #(subgraphs of type i) in randomized network $G^{rand}$.
 
