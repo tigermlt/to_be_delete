@@ -63,7 +63,7 @@ The basic idea of recursive feature extraction is to aggregate features of a nod
 
 The base set of a node's neighborhood features include:
 1. Local features, which are all measures of the node degree. 
-2. Egonet features, which are computed on the node's egonet and may include the number of within-egonet edges, and the number of edges entering/leaving egonet. Here egonet of a node  includes the node itself, its neighbors and any edges in the induced subgraph on these nodes
+2. Egonet features, which are computed on the node's egonet and may include the number of within-egonet edges, and the number of edges entering/leaving egonet. Here egonet of a node  includes the node itself, its neighbors and any edges in the induced subgraph on these nodes.
 
 To generate recursive features, firstly we start with the base set of node features,then use the set of current node features to generate additional features and repeat. Mean and sum are the two types of aggregate functions. The number of possible recursive features grows exponentially with each recursive iteration. 
 
