@@ -4,7 +4,7 @@
 
 In this section, we will begin by introducing the defination of subgraphs. Subnetworks, or subgraphs, are the building blocks of networks which enable us to characterize and discriminate networks.
 
-For example, in Figure 1 we show all the non-isomorphic directed subgraphs of size 3. These subgraphs differ from each other in the number of edges or direction of edges. Note we say graph G and H are isomorphic if there exists a bijection f: V(G) \rightarrow V(H) such that any two nodes u and v of G are adjacent in G if and only if f(u) and f(v) are adjacent in H.
+For example, in Figure 1 we show all the non-isomorphic directed subgraphs of size 3. These subgraphs differ from each other in the number of edges or direction of edges. Note we say graph G and H are isomorphic if there exists a bijection f: V(G) \rightarrow{} V(H) such that any two nodes u and v of G are adjacent in G if and only if f(u) and f(v) are adjacent in H.
 
 ### Motifs
 
