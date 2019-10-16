@@ -12,7 +12,7 @@ Network motifs are recurring, significant patterns of interconnections in the ne
 
 Recurrence of motif represents it occurs with high frequency. We allow overlapping of motifs.
 
-Significance of a motif means it is more frequent than expected. The key idea here is we say subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as: \begin{equation} Z_{i} = \frac{N_{i}^{real} - N_{i}^{rand}}{std(N_{i}^{rand})} \end{equation} <br>
+Significance of a motif means it is more frequent than expected. The key idea here is we say subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as: \begin{equation} $Z_{i} = \frac{N_{i}^{real} - \bar{N}_{i}^{rand}}{std(N_{i}^{rand})}$ \end{equation} <br>
 where $N_{i}^{real}$ is #(subgraphs of type i) in network $G^{real}$ and $N_{i}^{rand}$ is #(subgraphs of type i) in randomized network $G^{rand}$.
 
 Network significance profile (SP) is defined as: \begin{equation} SP_{i} = \frac{Z_{i}}{\sqrt{\sum_{j} {Z_j^{2}}}}  \end{equation} where SP is a vector of normalized Z-scores.
@@ -23,8 +23,8 @@ Configuration model is a random graph with a given degree sequence $k_1$, $k_2$,
 
 
 Another way for generation is as following:
-Start from a given graph G;
-Select a pair of edges A->B, C->D at random, exchange the endpoints to give A->D, C->B, repeat the switching stap Q*|E| times
+1) start from a given graph G;
+2) select a pair of edges A->B, C->D at random, exchange the endpoints to give A->D, C->B, repeat the switching step Q*|E| times.
 By this way, we will get a randomly rewired graph with same node degrees and randomly rewired edges.
 
 ### Graphlets
