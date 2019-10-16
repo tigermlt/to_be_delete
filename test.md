@@ -47,6 +47,9 @@ ESU is implemented as a recursive function, Figure 3 shows the pseudocode of thi
 ** Figure**
 
 ## Structural Roles in Networks
+
+### Roles 
+
 Roles are functions of nodes in a network that can be measured by structural behaviors. Note roles are different from groups/communities. Roles are based on the similarity of ties between subsets of nodes, nodes with the same role have similar structural properties, but they don't need to be in direct or even indirect interaction with each other. Group/community is formed based on adjacency, proximity or reachability, nodes in the same community are well-connected to each other.
 
 ### Structural equivalence
