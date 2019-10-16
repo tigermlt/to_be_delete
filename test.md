@@ -1,23 +1,23 @@
 # Subgraphs
 
-In this section, we begin by introducing subgraphs as motivation. Subnetworks, or subgraphs, are the building blocks of networks which enable us to characterize and discriminate networks.
+In this section, we will begin by introducing defination of subgraphs as motivation. Subnetworks, or subgraphs, are the building blocks of networks which enable us to characterize and discriminate networks.
 
-For example, Figure 1 shows all non-isomorphoic directed subgraphs of size 3. These subgraphs differ from each other in the number of edges or direction of edges. We say Graph G and H are isomorphic if there exists a bijection f: V(G)->V(H) such that any two nodes u and v of G are adjacent in G if and only if f(u) and f(v) are adjacent in H.
+For example, Figure 1 shows all non-isomorphoic directed subgraphs of size 3. These subgraphs differ from each other in the number of edges or direction of edges. Note we say graph G and H are isomorphic if there exists a bijection f: V(G)->V(H) such that any two nodes u and v of G are adjacent in G if and only if f(u) and f(v) are adjacent in H.
 
 ## Motifs
 
-Network motifs are recurring, significant patterns of interconnections in the network. Here, "pattern" means it is small induced subgraph. Induced subgraph of graph G is a graph formed from a subset X of the vertices of graph G and all of the edges connecting pairs of vertices in subset X. 
+Network motifs are recurring, significant patterns of interconnections in the network. Here, pattern means it is small induced subgraph. Note induced subgraph of graph G is a graph formed from a subset X of the vertices of graph G and all of the edges connecting pairs of vertices in subset X. 
 
 Recurrence of motif represents it occurs with high frequency. We allow overlapping of motifs.
 
-Significance of a motif means it is more frequent than expected. The key idea is subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as: \begin{equation} Z_{i} = \frac{N_{i}^{real} - N_{i}^{rand}}{std(N_{i}^{rand})} \end{equation} <br>
+Significance of a motif means it is more frequent than expected. The key idea here is we say subgraphs that occur in a real network much more often than in a random network have functional significance. Significance can be measured using Z-score which is defined as: \begin{equation} Z_{i} = \frac{N_{i}^{real} - N_{i}^{rand}}{std(N_{i}^{rand})} \end{equation} <br>
 where $N_{i}^{rand}$ is #(subgraphs of type i) in network $G^{rand}$ and $N_{i}^{rand}$ is #(subgraphs of type i) in randomized network $G^{rand}$.
 
-Network significance profile (SP) is defined as: $SP_{i} = \frac{Z_{i}}{\sqrt{\sum_{j}^{Z_j}}}$ where SP is a vector of normalized Z-scores
+Network significance profile (SP) is defined as: \begin{equation} SP_{i} = \frac{Z_{i}}{\sqrt{\sum_{j}^{Z_j}}}  \end{equation} where SP is a vector of normalized Z-scores
 
 ## Configuration Model
 
-Configuration model is a random graph with a given degree sequence $k_1$, $k_2$, ..., $k_N$ which can be used as a "null" model and compared with real network. Configuration model can be generated in an easy way as shown in Figure 2. *TODO*
+Configuration model is a random graph with a given degree sequence $k_1$, $k_2$, ..., $k_N$ which can be used as a "null" model and compared with real network. Configuration model can be generated in an easy way as shown in Figure 2. 
 
 
 Another way for generation is as following:
@@ -27,7 +27,7 @@ By this way, we will get a randomly rewired graph with same node degrees and ran
 
 ## Graphlets
 
-Graphlets are connected non-isomorphic subgraphs. It allows us to obtain a node-level subgraph metric. Graphlet Degree Vector (GDV) is a vector with the frequency of the node in each orbit position, it counts the number of graphlets that a node touches. GDV provides a measure  of a node's local network topology. 
+Graphlets are connected non-isomorphic subgraphs. It allows us to obtain a node-level subgraph metric. Graphlet Degree Vector (GDV) is a vector with the frequency of the node in each orbit position, it counts the number of graphlets that a node touches. GDV provides a measure of a node's local network topology. 
 
 ## Finding Motifs and Graphlets
 
@@ -35,10 +35,10 @@ Finding size-k motifs/graphlets requires us:
 1) enumerate all size-k connected subgraphs, 
 2) count the number of occurrences of each subgraph type.
 
-Just knowing iif a certain subgraph exists in a graph is a hard computational problem. Also, computation time grows exponentially as the size of the motif/graphlet increases.
+Just knowing if a certain subgraph exists in a graph is a hard computational problem. Also, computation time grows exponentially as the size of the motif/graphlet increases.
 
 ## ESU Algorithm
-Exact Subgraph Enumeration (ESU) Algorithm is ***. It includes two sets,  $V_subgraph$ contains nodes in currently constructed subgraph, and $V_extension$ is a set of candidate nodes to extend the motif.  The basic idea of ESU is firstly, starting with a node v, then adding nodes u to $V_extension$ set while u's node id is larger than that of v, and u may only be neighbored to some newly added node w but nor of any node already in $V_subgraph$. 
+Exact Subgraph Enumeration (ESU) Algorithm is TODO. It includes two sets,  $V_subgraph$ contains nodes in currently constructed subgraph, and $V_extension$ is a set of candidate nodes to extend the motif.  The basic idea of ESU is firstly starting with a node v, then adding nodes u to $V_extension$ set while u's node id is larger than that of v, and u may only be neighbored to some newly added node w but nor of any node already in $V_subgraph$. 
 
 ESU is implemented as a recursive function, Figure 3 shows the pseudocode of this algorithm:
 ** Figure**
