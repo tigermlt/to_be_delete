@@ -19,7 +19,7 @@ Network significance profile (SP) is defined as: \begin{equation} SP_{i} = \frac
 
 ### Configuration Model
 
-Configuration model is a random graph with a given degree sequence $k_1$, $k_2$, ..., $k_N$ which can be used as a "null" model and compared with real network. Configuration model can be generated in an easy way as shown in Figure 2. 
+Configuration model is a random graph with a given degree sequence $k_1$, $k_2$, ..., $k_N$ which can be used as a "null" model and then compared with real network. Configuration model can be generated in an easy way as shown in Figure 2. 
 
 
 Another way for generation is as following:
