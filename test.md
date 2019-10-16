@@ -48,3 +48,15 @@ Roles are functions of nodes in a network that can be measured by structural beh
 ## Structural equivalence
 We say nodes u and v are structurally equivalent if they have the same relationships to each other. Structurally equivalent nodes are likely to be similar in many different ways. For example, node u and v are structurally equivalent in Figure # since they connect other nodes in the same way.
 
+## RoIX
+Roles allow us to identify different properties of nodes in network. Here we will introduce an automatic structural roles discovery method called RolX. It's an unsupervised learning approach without prior knowledge. Figure 5 is the RoIX approach overview.
+
+## Recursive Feature Extraction
+The basic idea of recursive feature extraction is to aggregate features of a node and use them to generate new recursive features. By this way we can turn network connectivity into structural features. 
+
+The base set of a node's neighborhood features include:
+1. Local features, which are all measures of the node degree. 
+2. Egonet features, which are computed on the node's egonet and may include the number of within-egonet edges, and the number of edges entering/leaving egonet. Here egonet of a node  includes the node itself, its neighbors and any edges in the induced subgraph on these nodes
+
+To generate recursive features, firstly we start with the base set of node features,then use the set of current node features to generate additional features and repeat. Mean and sum are the two types of aggregate functions. The number of possible recursive features grows exponentially with each recursive iteration. 
+
