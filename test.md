@@ -35,7 +35,7 @@ Graphlets are connected non-isomorphic subgraphs. It allows us to obtain a node-
 ### Finding Motifs and Graphlets
 
 Finding size-k motifs/graphlets requires us: 
-1) enumerate all size-k connected subgraphs, 
+1) enumerate all size-k connected subgraphs; 
 2) count the number of occurrences of each subgraph type.
 
 Just knowing if a certain subgraph exists in a graph is a hard computational problem. Also, computation time grows exponentially as the size of the motif/graphlet increases.
