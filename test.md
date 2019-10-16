@@ -41,7 +41,7 @@ Finding size-k motifs/graphlets requires us:
 Just knowing if a certain subgraph exists in a graph is a hard computational problem. Also, computation time grows exponentially as the size of the motif/graphlet increases.
 
 ### ESU Algorithm
-Exact Subgraph Enumeration (ESU) Algorithm involves two sets,  $V_{subgraph}$ contains nodes in currently constructed subgraph, and $V_{extension}$ is a set of candidate nodes to extend the motif.  The basic idea of ESU is firstly starting with a node v, then adding nodes u to $V_{extension}$ set while u's node id is larger than that of v, and u may only be neighbored to some newly added node w but nor of any node already in $V_{subgraph}$. 
+Exact Subgraph Enumeration (ESU) Algorithm involves two sets,  while $V_{subgraph}$ contains nodes in currently constructed subgraph, and $V_{extension}$ is a set of candidate nodes to extend the motif.  The basic idea of ESU is firstly starting with a node v, then adding nodes u to $V_{extension}$ set while u's node id is larger than that of v, and u may only be neighbored to some newly added node w but nor of any node already in $V_{subgraph}$. 
 
 ESU is implemented as a recursive function, Figure 3 shows the pseudocode of this algorithm:
 ** Figure**
